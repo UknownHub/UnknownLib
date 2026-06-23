@@ -31,7 +31,7 @@ local Window = Lib:CreateWindow({
 ## 📁 Add a Tab
 
 ```lua
-local Main = Window:AddTab("Main")
+local Main = Window:AddTab("Your text here")
 ```
 
 ---
@@ -39,7 +39,7 @@ local Main = Window:AddTab("Main")
 ## 📌 Add a Section
 
 ```lua
-Main:AddSection("Player")
+Main:AddSection("Your text here")
 ```
 
 ---
