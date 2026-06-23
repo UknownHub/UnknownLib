@@ -48,7 +48,7 @@ Main:AddSection("Player")
 
 ```lua
 Main:AddButton({
-    Text = "Do Something",
+    Text = "Your text here",
     Callback = function()
         -- Your code here
     end,
@@ -61,7 +61,7 @@ Main:AddButton({
 
 ```lua
 local Toggle = Main:AddToggle({
-    Text = "Auto Farm",
+    Text = "Your text here",
     Default = false,
     Callback = function(state)
         -- Your code here
@@ -81,10 +81,10 @@ Toggle:Set(true)
 
 ```lua
 local Slider = Main:AddSlider({
-    Text = "Walk Speed",
-    Min = 16,
+    Text = "Your text here",
+    Min = 1,
     Max = 100,
-    Default = 16,
+    Default = 1,
     Callback = function(value)
         -- Your code here
     end,
@@ -94,7 +94,7 @@ local Slider = Main:AddSlider({
 Change the value:
 
 ```lua
-Slider:Set(50)
+Slider:Set(1)
 ```
 
 ---
@@ -104,11 +104,11 @@ Slider:Set(50)
 ```lua
 local Dropdown = Main:AddDropdown({
     Options = {
-        "Option 1",
-        "Option 2",
-        "Option 3"
+        "Text 1",
+        "Text 2",
+        "Text 3"
     },
-    Default = "Option 1",
+    Default = "Text 1",
     Callback = function(selected)
         -- Your code here
     end,
@@ -118,7 +118,7 @@ local Dropdown = Main:AddDropdown({
 Select a different option:
 
 ```lua
-Dropdown:Set("Option 2")
+Dropdown:Set("Text 2")
 ```
 
 ---
@@ -145,7 +145,7 @@ Available types:
 
 ```lua
 local Keybind = Main:AddKeybind({
-    Text = "Menu Key",
+    Text = "Your text here",
     Key = Enum.KeyCode.RightShift,
     Callback = function(key)
         -- Your code here
@@ -158,168 +158,6 @@ Read the current key:
 ```lua
 print(Keybind:Get())
 ```]]
-```
-
----
-
-## 📂 Creating a Tab
-
-```lua
-local Main = Window:AddTab("Main")
-```
-
----
-
-## 🏷️ Creating a Section
-
-```lua
-Main:AddSection("Main Features")
-```
-
----
-
-## 🔘 Creating a Button
-
-```lua
-Main:AddButton({
-    Text = "Click Me",
-    Callback = function()
-        -- Your code here
-    end,
-})
-
---[[
-Text = <string> - Text displayed on the button.
-Callback = <function> - Function executed when clicked.
-]]
-```
-
----
-
-## ✅ Creating a Toggle
-
-```lua
-local Toggle = Main:AddToggle({
-    Text = "Enable Feature",
-    Default = false,
-    Callback = function(Value)
-        -- Your code here
-    end,
-})
-
---[[
-Text = <string> - Toggle label.
-Default = <boolean> - Default state.
-Callback = <function> - Runs when toggled.
-]]
-```
-
-### Change Toggle State
-
-```lua
-Toggle:Set(true)
-```
-
----
-
-## 🎚️ Creating a Slider
-
-```lua
-local Slider = Main:AddSlider({
-    Text = "Walk Speed",
-    Min = 16,
-    Max = 100,
-    Default = 16,
-    Callback = function(Value)
-        -- Your code here
-    end,
-})
-
---[[
-Text = <string> - Slider label.
-Min = <number> - Minimum value.
-Max = <number> - Maximum value.
-Default = <number> - Starting value.
-Callback = <function> - Runs when value changes.
-]]
-```
-
-### Change Slider Value
-
-```lua
-Slider:Set(50)
-```
-
----
-
-## 📜 Creating a Dropdown
-
-```lua
-local Dropdown = Main:AddDropdown({
-    Options = {
-        "Option 1",
-        "Option 2",
-        "Option 3"
-    },
-    Default = "Option 1",
-    Callback = function(Value)
-        -- Your code here
-    end,
-})
-
---[[
-Options = <table> - Available selections.
-Default = <string> - Default selected option.
-Callback = <function> - Runs when selection changes.
-]]
-```
-
-### Change Selected Option
-
-```lua
-Dropdown:Set("Option 2")
-```
-
----
-
-## 🔔 Creating a Notification
-
-```lua
-Main:AddNotification({
-    Text = "Library Loaded!",
-    Type = "success",
-})
-
---[[
-Text = <string> - Notification message.
-Type = <string> - "info", "success", "warning", or "error".
-]]
-```
-
----
-
-## ⌨️ Creating a Keybind
-
-```lua
-local Bind = Main:AddKeybind({
-    Text = "Toggle UI",
-    Key = Enum.KeyCode.RightShift,
-    Callback = function(Key)
-        -- Your code here
-    end,
-})
-
---[[
-Text = <string> - Label shown beside the keybind.
-Key = <Enum.KeyCode> - Default assigned key.
-Callback = <function> - Runs when the keybind changes.
-]]
-```
-
-### Get the Current Key
-
-```lua
-print(Bind:Get())
 ```
 
 ---
