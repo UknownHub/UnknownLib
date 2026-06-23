@@ -1,9 +1,10 @@
-````markdown
-# 🌌 UnknownLib Documentation
+# 🌠 UnknownLib
 
-Welcome to **UnknownLib**, a lightweight and customizable Roblox UI library.
+A lightweight Roblox UI library focused on simplicity and clean design.
 
-## 🚀 Booting the Library
+## 📦 Installation
+
+Import the latest version of UnknownLib:
 
 ```lua
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/UknownHub/UnknownLib/refs/heads/main/UnknownLib.lua"))()
@@ -11,18 +12,152 @@ local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/UknownHub
 
 ---
 
-## 🪟 Creating a Window
+## 🪟 Create a Window
 
 ```lua
 local Window = Lib:CreateWindow({
-    Title = "My Hub",
+    Title = "Unknown Hub",
     ToggleKey = Enum.KeyCode.RightShift,
 })
+```
 
---[[
-Title = <string> - The title displayed on the window.
-ToggleKey = <Enum.KeyCode> - The key used to show or hide the UI.
-]]
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `Title` | `string` | Text shown in the title bar. |
+| `ToggleKey` | `Enum.KeyCode` | Key used to show or hide the interface. |
+
+---
+
+## 📁 Add a Tab
+
+```lua
+local Main = Window:AddTab("Main")
+```
+
+---
+
+## 📌 Add a Section
+
+```lua
+Main:AddSection("Player")
+```
+
+---
+
+## 🔘 Add a Button
+
+```lua
+Main:AddButton({
+    Text = "Do Something",
+    Callback = function()
+        -- Your code here
+    end,
+})
+```
+
+---
+
+## ✅ Add a Toggle
+
+```lua
+local Toggle = Main:AddToggle({
+    Text = "Auto Farm",
+    Default = false,
+    Callback = function(state)
+        -- Your code here
+    end,
+})
+```
+
+Update it later:
+
+```lua
+Toggle:Set(true)
+```
+
+---
+
+## 🎚️ Add a Slider
+
+```lua
+local Slider = Main:AddSlider({
+    Text = "Walk Speed",
+    Min = 16,
+    Max = 100,
+    Default = 16,
+    Callback = function(value)
+        -- Your code here
+    end,
+})
+```
+
+Change the value:
+
+```lua
+Slider:Set(50)
+```
+
+---
+
+## 📋 Add a Dropdown
+
+```lua
+local Dropdown = Main:AddDropdown({
+    Options = {
+        "Option 1",
+        "Option 2",
+        "Option 3"
+    },
+    Default = "Option 1",
+    Callback = function(selected)
+        -- Your code here
+    end,
+})
+```
+
+Select a different option:
+
+```lua
+Dropdown:Set("Option 2")
+```
+
+---
+
+## 🔔 Add a Notification
+
+```lua
+Main:AddNotification({
+    Text = "Loaded successfully!",
+    Type = "success",
+})
+```
+
+Available types:
+
+- `info`
+- `success`
+- `warning`
+- `error`
+
+---
+
+## ⌨️ Add a Keybind
+
+```lua
+local Keybind = Main:AddKeybind({
+    Text = "Menu Key",
+    Key = Enum.KeyCode.RightShift,
+    Callback = function(key)
+        -- Your code here
+    end,
+})
+```
+
+Read the current key:
+
+```lua
+print(Keybind:Get())
+```]]
 ```
 
 ---
