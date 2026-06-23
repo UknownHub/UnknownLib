@@ -16,7 +16,7 @@ local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/UknownHub
 
 ```lua
 local Window = Lib:CreateWindow({
-    Title = "Unknown Hub",
+    Title = "Your text here",
     ToggleKey = Enum.KeyCode.RightShift,
 })
 ```
